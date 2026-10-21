@@ -1,0 +1,14 @@
+{
+  "name": "LUMINA - あなた本来の輝きを引き出すプライベートエステサロン",
+  "short_name": "LUMINA",
+  "icons": [
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FAF8F5",
+  "background_color": "#FAF8F5",
+  "display": "standalone"
+}
