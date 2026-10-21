@@ -99,10 +99,11 @@ menuTabs.forEach(tab => {
   });
 });
 
-// 簡易予約モーダル機能（デモ・確認用）
+// 準備中案内モーダル機能
 const reservationModal = document.getElementById('reservation-modal');
 const openModalBtns = document.querySelectorAll('.open-reservation-btn');
 const closeModalBtn = document.getElementById('close-modal-btn');
+const closeModalBtnSub = document.getElementById('close-modal-btn-sub');
 
 openModalBtns.forEach(btn => {
   btn.addEventListener('click', (e) => {
@@ -114,14 +115,16 @@ openModalBtns.forEach(btn => {
   });
 });
 
-if (closeModalBtn) {
-  closeModalBtn.addEventListener('click', () => {
-    if (reservationModal) {
-      reservationModal.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-  });
-}
+[closeModalBtn, closeModalBtnSub].forEach(btn => {
+  if (btn) {
+    btn.addEventListener('click', () => {
+      if (reservationModal) {
+        reservationModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+});
 
 if (reservationModal) {
   reservationModal.addEventListener('click', (e) => {

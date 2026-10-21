@@ -44,10 +44,10 @@
 
       <!-- ヘッダーCTA -->
       <div class="hidden sm:flex items-center gap-3">
-        <a href="#reservation" class="open-reservation-btn inline-flex items-center gap-2 bg-[#b8935a] hover:bg-[#a07e49] text-white text-xs tracking-wider px-5 py-2.5 rounded-full shadow-sm hover:shadow transition-all duration-300">
-          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-          <span>WEB予約</span>
-        </a>
+        <button class="open-reservation-btn inline-flex items-center gap-2 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#7A7169] hover:text-white border border-[#D5CBC0] text-xs tracking-wider px-4 py-2 rounded-full transition-all duration-300">
+          <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+          <span>受付準備中</span>
+        </button>
       </div>
 
       <!-- モバイルハンバーガーボタン -->
@@ -85,12 +85,13 @@
     </nav>
 
     <div class="flex flex-col gap-3 pt-6 border-t border-[#E8E2D9]">
-      <a href="#reservation" class="open-reservation-btn mobile-nav-link w-full py-3.5 bg-[#b8935a] text-white text-center rounded-full font-sans-jp text-sm tracking-wider shadow">
-        24時間WEB予約はこちら
-      </a>
+      <button class="open-reservation-btn mobile-nav-link w-full py-3.5 bg-[#FAF8F5] text-[#7A7169] border border-[#D5CBC0] text-center rounded-full font-sans-jp text-sm tracking-wider flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 text-[#b8935a]"></i>
+        <span>予約受付準備中（近日公開）</span>
+      </button>
       <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-[#06C755] text-white text-center rounded-full font-sans-jp text-sm tracking-wider shadow flex items-center justify-center gap-2">
         <i data-lucide="message-circle" class="w-4 h-4"></i>
-        <span>LINEで空き状況を相談・予約</span>
+        <span>公式LINEはこちら</span>
       </a>
     </div>
   </div>
@@ -133,14 +134,17 @@
 
           <!-- アクションボタン -->
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <a href="#reservation" class="open-reservation-btn inline-flex items-center justify-center gap-3 bg-[#b8935a] hover:bg-[#a07e49] text-white px-8 py-4 rounded-full text-sm font-sans-jp tracking-widest shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
-              <span>【初回限定体験プラン】で予約する</span>
+            <a href="#menu" class="inline-flex items-center justify-center gap-3 bg-[#b8935a] hover:bg-[#a07e49] text-white px-8 py-4 rounded-full text-sm font-sans-jp tracking-widest shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+              <span>施術メニュー一覧を見る</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
             <a href="#concerns" class="inline-flex items-center justify-center gap-2 bg-white/80 hover:bg-white text-[#38332E] border border-[#D5CBC0] px-7 py-4 rounded-full text-sm font-sans-jp tracking-wider shadow-sm transition-all duration-300">
               <span>こんなお悩みありませんか？</span>
             </a>
           </div>
+          <p class="text-xs text-[#7A7169] mt-3 tracking-wider font-sans-jp">
+            ※現在グランドオープン準備中です。予約受付開始まで今しばらくお待ちください。
+          </p>
 
           <!-- 3つの安心ポイント -->
           <div class="grid grid-cols-3 gap-3 pt-10 border-t border-[#D5CBC0]/60 mt-10 max-w-lg">
@@ -501,10 +505,10 @@
                     ¥3,000<span class="text-xs font-normal text-[#5F5750]">（税込）</span>
                   </div>
                 </div>
-                <a href="#reservation" class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#b8935a] hover:bg-[#a07e49] text-white text-xs px-5 py-2.5 rounded-full font-sans-jp transition-colors">
-                  <span>予約する</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
+                <button class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#7A7169] hover:text-white border border-[#D5CBC0] text-xs px-4 py-2 rounded-full font-sans-jp transition-all">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+                  <span>受付準備中</span>
+                </button>
               </div>
             </div>
           </div>
@@ -536,10 +540,10 @@
                     ¥6,000<span class="text-xs font-normal text-[#5F5750]">（税込）</span>
                   </div>
                 </div>
-                <a href="#reservation" class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#38332E] hover:text-white border border-[#D5CBC0] text-xs px-5 py-2.5 rounded-full font-sans-jp transition-all">
-                  <span>予約する</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
+                <button class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#7A7169] hover:text-white border border-[#D5CBC0] text-xs px-4 py-2 rounded-full font-sans-jp transition-all">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+                  <span>受付準備中</span>
+                </button>
               </div>
             </div>
           </div>
@@ -576,10 +580,10 @@
                     ¥15,000<span class="text-xs font-normal text-[#5F5750]">（税込）</span>
                   </div>
                 </div>
-                <a href="#reservation" class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#38332E] hover:text-white border border-[#D5CBC0] text-xs px-5 py-2.5 rounded-full font-sans-jp transition-all">
-                  <span>予約する</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
+                <button class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#7A7169] hover:text-white border border-[#D5CBC0] text-xs px-4 py-2 rounded-full font-sans-jp transition-all">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+                  <span>受付準備中</span>
+                </button>
               </div>
             </div>
           </div>
@@ -616,10 +620,10 @@
                     ¥36,000<span class="text-xs font-normal text-[#5F5750]">（税込）</span>
                   </div>
                 </div>
-                <a href="#reservation" class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#38332E] hover:text-white border border-[#D5CBC0] text-xs px-5 py-2.5 rounded-full font-sans-jp transition-all">
-                  <span>予約する</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
+                <button class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#7A7169] hover:text-white border border-[#D5CBC0] text-xs px-4 py-2 rounded-full font-sans-jp transition-all">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+                  <span>受付準備中</span>
+                </button>
               </div>
             </div>
           </div>
@@ -659,10 +663,10 @@
                     各6回 ¥50,000<span class="text-xs font-normal text-[#5F5750]">（税込）</span>
                   </div>
                 </div>
-                <a href="#reservation" class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#b8935a] hover:bg-[#a07e49] text-white text-xs px-6 py-2.5 rounded-full font-sans-jp shadow transition-all">
-                  <span>予約する</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
+                <button class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#7A7169] hover:text-white border border-[#D5CBC0] text-xs px-5 py-2 rounded-full font-sans-jp transition-all">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+                  <span>受付準備中</span>
+                </button>
               </div>
             </div>
           </div>
@@ -694,10 +698,10 @@
                     ¥55,000<span class="text-xs font-normal text-[#5F5750]">（税込）</span>
                   </div>
                 </div>
-                <a href="#reservation" class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#38332E] hover:text-white border border-[#D5CBC0] text-xs px-5 py-2.5 rounded-full font-sans-jp transition-all">
-                  <span>予約する</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
+                <button class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#7A7169] hover:text-white border border-[#D5CBC0] text-xs px-4 py-2 rounded-full font-sans-jp transition-all">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+                  <span>受付準備中</span>
+                </button>
               </div>
             </div>
           </div>
@@ -1076,44 +1080,35 @@
       </div>
     </section>
 
-    <!-- 予約・お問い合わせ CTAセクション -->
+    <!-- 予約・お問い合わせ CTAセクション（準備中） -->
     <section id="reservation" class="py-20 sm:py-28 px-6 sm:px-8 bg-gradient-to-b from-[#FAF8F5] to-[#F3EFEA] text-center">
       <div class="max-w-3xl mx-auto">
-        <span class="font-serif-en text-xs tracking-[0.3em] text-[#b8935a] uppercase block mb-3">Reservation</span>
+        <span class="font-serif-en text-xs tracking-[0.3em] text-[#b8935a] uppercase block mb-3">Information</span>
         <h2 class="font-serif-jp text-2xl sm:text-3xl md:text-4xl text-[#2C2724] font-medium leading-relaxed mb-6">
-          今日が、新しいあなたと出逢う<br />
-          一番若い日。
+          グランドオープンに向けて<br />
+          現在準備を進めております
         </h2>
         <p class="font-sans-jp text-sm sm:text-base text-[#5F5750] leading-relaxed mb-10 max-w-xl mx-auto">
-          迷いを手放し、ご自身を大切にする贅沢な時間をプレゼントしませんか？<br />
-          ご予約・空き状況の確認は、WEBまたは公式LINEより24時間いつでも承っております。
+          現在、より上質な施術と特別なプライベート空間をお届けできるよう、オープンに向けた準備を行っております。<br />
+          お申し込み・ご予約の受付開始日時につきましては、決定次第こちらのWebサイトおよび公式SNSにてご案内いたします。
         </p>
 
-        <!-- 2大予約ボタン -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-8 font-sans-jp">
-          <!-- WEB予約 -->
-          <button class="open-reservation-btn w-full bg-[#b8935a] hover:bg-[#a07e49] text-white py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center gap-1 group">
-            <span class="text-xs tracking-wider opacity-90">24時間即時確定</span>
-            <span class="text-base font-bold flex items-center gap-2">
-              <i data-lucide="calendar" class="w-5 h-5"></i>
-              <span>WEBでオンライン予約</span>
-            </span>
-          </button>
-
-          <!-- LINE予約 -->
-          <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="w-full bg-[#06C755] hover:bg-[#05b34c] text-white py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center gap-1 group">
-            <span class="text-xs tracking-wider opacity-90">事前のお悩み相談も受付中</span>
-            <span class="text-base font-bold flex items-center gap-2">
-              <i data-lucide="message-circle" class="w-5 h-5"></i>
-              <span>公式LINEから予約・相談</span>
-            </span>
+        <!-- 準備中案内カード -->
+        <div class="bg-white rounded-3xl p-8 sm:p-10 max-w-lg mx-auto border border-[#E8DEC0] shadow-sm font-sans-jp text-center">
+          <div class="w-12 h-12 rounded-full bg-[#FAF8F5] border border-[#E8DEC0] text-[#b8935a] flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="clock" class="w-6 h-6"></i>
+          </div>
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF8F5] border border-[#C5A880]/50 text-[#8C6D3E] text-xs font-medium mb-3">
+            <span>ご予約・お申し込み：準備中（近日公開）</span>
+          </div>
+          <p class="text-xs text-[#7A7169] leading-relaxed mb-6">
+            先行体験案内やオープニングキャンペーン情報をご希望の方は、受付開始まで今しばらくお待ちいただけますようお願い申し上げます。
+          </p>
+          <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3.5 bg-[#06C755] hover:bg-[#05b34c] text-white rounded-xl font-medium text-xs shadow transition-all">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>公式LINEでオープン情報を待つ</span>
           </a>
         </div>
-
-        <p class="text-xs text-[#8C827A] font-sans-jp">
-          ※お電話でのご予約・お問い合わせも承っております：
-          <a href="tel:03-0000-0000" class="hover:text-[#b8935a] underline">03-0000-0000</a>（施術中は折り返しとなります）
-        </p>
       </div>
     </section>
   </main>
@@ -1161,76 +1156,40 @@
     </div>
   </footer>
 
-  <!-- モバイル用 固定予約バー (スマホ集客最適化) -->
+  <!-- モバイル用 固定バー (スマホ回遊最適化) -->
   <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-[#E8E2D9] p-3 shadow-lg flex gap-2">
-    <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="flex-1 bg-[#06C755] text-white py-3 rounded-xl font-sans-jp text-xs font-bold flex items-center justify-center gap-1.5 shadow">
-      <i data-lucide="message-circle" class="w-4 h-4"></i>
-      <span>LINEで無料相談</span>
+    <a href="#menu" class="flex-1 bg-[#FAF8F5] text-[#38332E] border border-[#D5CBC0] py-3 rounded-xl font-sans-jp text-xs font-medium flex items-center justify-center gap-1.5 shadow-xs">
+      <i data-lucide="sparkles" class="w-4 h-4 text-[#b8935a]"></i>
+      <span>施術メニューを見る</span>
     </a>
-    <a href="#reservation" class="open-reservation-btn flex-1 bg-[#b8935a] text-white py-3 rounded-xl font-sans-jp text-xs font-bold flex items-center justify-center gap-1.5 shadow">
-      <i data-lucide="calendar" class="w-4 h-4"></i>
-      <span>WEBで即時予約</span>
-    </a>
+    <button class="open-reservation-btn flex-1 bg-[#FAF8F5] text-[#7A7169] border border-[#D5CBC0] py-3 rounded-xl font-sans-jp text-xs font-medium flex items-center justify-center gap-1.5 shadow-xs">
+      <i data-lucide="clock" class="w-4 h-4 text-[#b8935a]"></i>
+      <span>受付準備中</span>
+    </button>
   </div>
 
-  <!-- 簡易予約モーダル（デモ・ローカル確認用） -->
+  <!-- 準備中ご案内モーダル（申し込み受付前のお知らせ） -->
   <div id="reservation-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button id="close-modal-btn" class="absolute top-5 right-5 text-[#8C827A] hover:text-[#2C2724] p-1">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative">
+      <button id="close-modal-btn" class="absolute top-5 right-5 text-[#8C827A] hover:text-[#2C2724] p-1" aria-label="閉じる">
         <i data-lucide="x" class="w-6 h-6"></i>
       </button>
 
-      <div class="text-center mb-6">
-        <span class="font-serif-en text-xs tracking-widest text-[#b8935a] uppercase">Reservation</span>
-        <h3 class="font-serif-jp text-xl text-[#2C2724] font-medium mt-1">ご予約・お問い合わせ</h3>
-        <p class="font-sans-jp text-xs text-[#7A7169] mt-2">
-          下記フォームまたは公式LINEよりお申し込みいただけます。
+      <div class="text-center py-4">
+        <div class="w-14 h-14 rounded-full bg-[#FAF8F5] border border-[#E8DEC0] text-[#b8935a] flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="clock" class="w-7 h-7"></i>
+        </div>
+        <span class="font-serif-en text-xs tracking-widest text-[#b8935a] uppercase">Information</span>
+        <h3 class="font-serif-jp text-xl text-[#2C2724] font-medium mt-1 mb-3">お申し込み・ご予約について</h3>
+        <p class="font-sans-jp text-xs text-[#5F5750] leading-relaxed mb-6">
+          現在、グランドオープンに向けた準備期間となっております。<br />
+          誠に恐れ入りますが、お申し込み・ご予約の受付開始まで今しばらくお待ちいただけますようお願い申し上げます。<br /><br />
+          受付開始の日程が決まり次第、こちらのWebサイトおよび公式SNS等で順次ご案内いたします。
         </p>
-      </div>
-
-      <form onsubmit="event.preventDefault(); alert('ご予約リクエストを受け付けました。折り返しサロンよりご連絡いたします。（※ローカル確認用デモ）');" class="space-y-4 font-sans-jp text-xs">
-        <div>
-          <label class="block text-[#38332E] font-medium mb-1">お名前 <span class="text-rose-500">*</span></label>
-          <input type="text" required placeholder="例：山田 花子" class="w-full px-4 py-2.5 rounded-xl border border-[#D5CBC0] focus:outline-none focus:border-[#b8935a]" />
-        </div>
-
-        <div>
-          <label class="block text-[#38332E] font-medium mb-1">メールアドレス <span class="text-rose-500">*</span></label>
-          <input type="email" required placeholder="example@email.com" class="w-full px-4 py-2.5 rounded-xl border border-[#D5CBC0] focus:outline-none focus:border-[#b8935a]" />
-        </div>
-
-        <div>
-          <label class="block text-[#38332E] font-medium mb-1">お電話番号 <span class="text-rose-500">*</span></label>
-          <input type="tel" required placeholder="090-1234-5678" class="w-full px-4 py-2.5 rounded-xl border border-[#D5CBC0] focus:outline-none focus:border-[#b8935a]" />
-        </div>
-
-        <div>
-          <label class="block text-[#38332E] font-medium mb-1">ご希望のメニュー</label>
-          <select class="w-full px-4 py-2.5 rounded-xl border border-[#D5CBC0] focus:outline-none focus:border-[#b8935a] bg-white">
-            <option>Celangel Line（フェイスデザインケア 3,000円）</option>
-            <option>Celangel face slim Line（集中フェイスライン 6,000円）</option>
-            <option>【プレミアム6回】Celangel Face コース（15,000円 / セラミド6,600円相当特典付）</option>
-            <option>【プレミアム6回】Celangel face slim Line コース（36,000円 / EGF 13,200円相当特典付）</option>
-            <option>【プレミアム各6回】Celangel Premium (Face + slim Line)（50,000円 / 38,500円相当特典付）</option>
-            <option>【ボディ打ち放題】Celangel Body Premium Bottle（55,000円）</option>
-            <option>当日カウンセリングで相談して決めたい</option>
-          </select>
-        </div>
-
-        <div>
-          <label class="block text-[#38332E] font-medium mb-1">ご希望日時（第1希望） <span class="text-rose-500">*</span></label>
-          <input type="datetime-local" required class="w-full px-4 py-2.5 rounded-xl border border-[#D5CBC0] focus:outline-none focus:border-[#b8935a]" />
-        </div>
-
-        <div>
-          <label class="block text-[#38332E] font-medium mb-1">ご要望・お悩み（任意）</label>
-          <textarea rows="3" placeholder="特に気になるお悩みやご質問があればご記入ください" class="w-full px-4 py-2.5 rounded-xl border border-[#D5CBC0] focus:outline-none focus:border-[#b8935a]"></textarea>
-        </div>
-
-        <button type="submit" class="w-full py-3.5 bg-[#b8935a] hover:bg-[#a07e49] text-white rounded-xl font-bold tracking-wider shadow transition-colors text-sm">
-          予約リクエストを送信する
+        <button id="close-modal-btn-sub" class="w-full py-3 bg-[#b8935a] hover:bg-[#a07e49] text-white rounded-xl font-sans-jp text-xs transition-colors font-medium shadow">
+          閉じる
         </button>
-      </form>
+      </div>
     </div>
   </div>
 
