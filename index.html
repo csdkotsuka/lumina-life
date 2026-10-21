@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMINA（ルミナ）| あなた本来の輝きを引き出すプライベートエステサロン</title>
+  <meta name="description" content="光をまとう美しさ。内側から輝く素肌へ導くプライベートエステサロン『LUMINA（ルミナ）』。40代からのたるみ・くすみ・ハリ不足を根本改善。完全個室の上質な空間で、魂のレベルで寄り添う本格ケアをご体験ください。" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Great+Vibes&family=Marcellus&family=Montserrat:wght@300;400;500;600&family=Parisienne&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body class="bg-[#FAF8F5] text-[#38332E] antialiased selection:bg-[#c5a880]/20 selection:text-[#38332E] pb-24 md:pb-0">
+
+  <!-- ヘッダー -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#E8E2D9] transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+      
+      <!-- ロゴ（流麗なイタリック＆ダイアモンド接続ロゴ） -->
+      <a href="#" class="flex items-center group w-[180px] sm:w-[220px] py-1">
+        <div id="header-logo-container" class="w-full">
+          <!-- JSで動的レンダリング -->
+        </div>
+      </a>
+
+      <!-- デスクトップ ナビゲーション（1文字改行を防止するwhitespace-nowrap & レスポンシブギャップ設計） -->
+      <nav class="hidden md:flex items-center gap-2 lg:gap-3 xl:gap-5 font-sans-jp text-[11px] lg:text-xs tracking-wider text-[#554E48] whitespace-nowrap">
+        <a href="#logo-selection" class="text-[#b8935a] font-medium hover:underline transition-colors px-1 py-2 flex items-center gap-1">
+          <i data-lucide="sparkles" class="w-3 h-3"></i>
+          <span>ロゴ案</span>
+        </a>
+        <a href="#concept" class="hover:text-[#b8935a] transition-colors px-1 py-2">想い</a>
+        <a href="#concerns" class="hover:text-[#b8935a] transition-colors px-1 py-2">お悩み</a>
+        <a href="#commitment" class="hover:text-[#b8935a] transition-colors px-1 py-2">こだわり</a>
+        <a href="#menu" class="hover:text-[#b8935a] transition-colors px-1 py-2">料金・メニュー</a>
+        <a href="#voice" class="hover:text-[#b8935a] transition-colors px-1 py-2">お客様の声</a>
+        <a href="#therapist" class="hover:text-[#b8935a] transition-colors px-1 py-2">セラピスト</a>
+        <a href="#access" class="hover:text-[#b8935a] transition-colors px-1 py-2">サロン情報</a>
+        <a href="#faq" class="hover:text-[#b8935a] transition-colors px-1 py-2">よくある質問</a>
+      </nav>
+
+      <!-- ヘッダーCTA -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#reservation" class="open-reservation-btn inline-flex items-center gap-2 bg-[#b8935a] hover:bg-[#a07e49] text-white text-xs tracking-wider px-5 py-2.5 rounded-full shadow-sm hover:shadow transition-all duration-300">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span>WEB予約</span>
+        </a>
+      </div>
+
+      <!-- モバイルハンバーガーボタン -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-[#2C2724] hover:text-[#b8935a] focus:outline-none" aria-label="メニューを開く">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイルメニュー オーバーレイ -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-[#FAF8F5] hidden flex-col justify-between p-8 overflow-y-auto">
+    <div class="flex justify-between items-center pb-6 border-b border-[#E8E2D9]">
+      <div class="flex flex-col">
+        <span class="font-serif-en tracking-[0.25em] text-2xl text-[#2C2724]">LUMINA</span>
+        <span class="font-sans-jp text-[9px] tracking-[0.2em] text-[#8C827A] uppercase">Private Esthetic Salon</span>
+      </div>
+      <button id="mobile-menu-close" class="p-2 text-[#2C2724]" aria-label="メニューを閉じる">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col gap-6 py-8 font-serif-jp text-lg tracking-widest text-[#38332E]">
+      <a href="#logo-selection" class="mobile-nav-link text-[#b8935a] flex items-center gap-2">
+        <i data-lucide="sparkles" class="w-4 h-4"></i>
+        <span>ロゴデザイン案サンプル</span>
+      </a>
+      <a href="#concept" class="mobile-nav-link hover:text-[#b8935a]">サロンの想い</a>
+      <a href="#concerns" class="mobile-nav-link hover:text-[#b8935a]">こんなお悩みの方へ</a>
+      <a href="#commitment" class="mobile-nav-link hover:text-[#b8935a]">ルミナの3つの約束</a>
+      <a href="#menu" class="mobile-nav-link hover:text-[#b8935a]">施術メニュー・料金</a>
+      <a href="#voice" class="mobile-nav-link hover:text-[#b8935a]">お客様の声</a>
+      <a href="#therapist" class="mobile-nav-link hover:text-[#b8935a]">オーナーからの手紙</a>
+      <a href="#access" class="mobile-nav-link hover:text-[#b8935a]">アクセス・サロン情報</a>
+      <a href="#faq" class="mobile-nav-link hover:text-[#b8935a]">よくあるご質問</a>
+    </nav>
+
+    <div class="flex flex-col gap-3 pt-6 border-t border-[#E8E2D9]">
+      <a href="#reservation" class="open-reservation-btn mobile-nav-link w-full py-3.5 bg-[#b8935a] text-white text-center rounded-full font-sans-jp text-sm tracking-wider shadow">
+        24時間WEB予約はこちら
+      </a>
+      <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-[#06C755] text-white text-center rounded-full font-sans-jp text-sm tracking-wider shadow flex items-center justify-center gap-2">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>LINEで空き状況を相談・予約</span>
+      </a>
+    </div>
+  </div>
+
+  <main class="mt-20">
+    <!-- ヒーローセクション -->
+    <section class="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden py-16 sm:py-24">
+      <!-- 背景装飾グラデーション & 画像 -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=80" 
+          alt="Lumina Salone Atmosphere" 
+          class="w-full h-full object-cover object-center filter brightness-[0.92] contrast-[0.95]"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#FAF8F5]/92 via-[#FAF8F5]/85 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 w-full">
+        <div class="max-w-2xl">
+          <!-- 初回タグ -->
+          <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur border border-[#C5A880]/40 px-4 py-1.5 rounded-full mb-6 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#b8935a] animate-pulse"></span>
+            <span class="font-sans-jp text-xs tracking-wider text-[#735A37] font-medium">40代からの肌質改善・完全個室プライベートサロン</span>
+          </div>
+
+          <!-- メインコピー -->
+          <h1 class="font-serif-jp text-3xl sm:text-4xl md:text-5xl leading-[1.6] sm:leading-[1.5] text-[#2C2724] font-medium tracking-wide mb-6">
+            光をまとう美しさ。<br />
+            <span class="text-gold-gradient">あなた本来の輝き</span>を<br class="hidden sm:inline" />呼び覚ます場所。
+          </h1>
+
+          <!-- サブコピー -->
+          <p class="font-sans-jp text-sm sm:text-base leading-relaxed text-[#5F5750] mb-8 font-light">
+            「何をしても変わらない」「疲れて見られることが増えた」と感じていませんか？<br />
+            まずキレイになって、自分の顔に確かな自信を取り戻す。<br />
+            何があっても「私なら大丈夫」と思える、新しい人生のスタートをここから。<br />
+            魂のレベルであなたに寄り添い、全力を尽くすケアをお届けします。
+          </p>
+
+          <!-- アクションボタン -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a href="#reservation" class="open-reservation-btn inline-flex items-center justify-center gap-3 bg-[#b8935a] hover:bg-[#a07e49] text-white px-8 py-4 rounded-full text-sm font-sans-jp tracking-widest shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+              <span>【初回限定体験プラン】で予約する</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="#concerns" class="inline-flex items-center justify-center gap-2 bg-white/80 hover:bg-white text-[#38332E] border border-[#D5CBC0] px-7 py-4 rounded-full text-sm font-sans-jp tracking-wider shadow-sm transition-all duration-300">
+              <span>こんなお悩みありませんか？</span>
+            </a>
+          </div>
+
+          <!-- 3つの安心ポイント -->
+          <div class="grid grid-cols-3 gap-3 pt-10 border-t border-[#D5CBC0]/60 mt-10 max-w-lg">
+            <div class="text-center">
+              <span class="block font-serif-en text-xl text-[#b8935a] font-medium">01</span>
+              <span class="text-[11px] font-sans-jp text-[#7A7169]">完全個室制</span>
+            </div>
+            <div class="text-center border-l border-[#D5CBC0]/50">
+              <span class="block font-serif-en text-xl text-[#b8935a] font-medium">02</span>
+              <span class="text-[11px] font-sans-jp text-[#7A7169]">結果への徹底追求</span>
+            </div>
+            <div class="text-center border-l border-[#D5CBC0]/50">
+              <span class="block font-serif-en text-xl text-[#b8935a] font-medium">03</span>
+              <span class="text-[11px] font-sans-jp text-[#7A7169]">勧誘一切なし</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- お知らせ / 初回キャンペーン バナー -->
+    <section class="bg-[#F2ECE4] border-y border-[#E2D8CC] py-4">
+      <div class="max-w-6xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-sans-jp">
+        <div class="flex items-center gap-3">
+          <span class="bg-[#b8935a] text-white px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider">NEW MENU</span>
+          <p class="text-[#4E4640] tracking-wide">
+            細くなり、美しくなる。「Celangel（セランジェル）」ビューティーメニュー登場。3,000円〜体験可能
+          </p>
+        </div>
+        <a href="#menu" class="text-[#8C6D3E] hover:underline flex items-center gap-1 text-[11px] font-medium tracking-wider">
+          料金表・豪華特典を見る <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ブランドロゴ検討ギャラリー（新設） -->
+    <section id="logo-selection" class="py-16 sm:py-20 px-6 sm:px-8 bg-gradient-to-b from-[#FAF8F5] via-[#F5EFE7] to-[#FAF8F5] border-b border-[#E8DEC0]/60">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+          <div>
+            <div class="inline-flex items-center gap-1.5 bg-white border border-[#C5A880]/50 px-3.5 py-1 rounded-full text-xs font-sans-jp text-[#8C6D3E] mb-3 shadow-sm">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>赤枠3デザイン × 2色のベースロゴを融合（全8パターン）</span>
+            </div>
+            <h2 class="font-serif-jp text-2xl sm:text-3xl text-[#2C2724] font-medium">
+              Lumina 融合アレンジ・ロゴコレクション
+            </h2>
+            <p class="font-sans-jp text-xs sm:text-sm text-[#7A7169] mt-2 max-w-2xl leading-relaxed">
+              2つ目の画像の<strong>「ゴールド＆ピンクゴールドの流麗なL字＋UMINA＋右端ダイヤ」</strong>をベースに、1つ目の画像で赤枠で囲まれた3つの特徴（<strong>① 3段目左のシンプル王道スタイル</strong>、<strong>② 2段目右のL字トップのハートアレンジ</strong>、<strong>③ 1段目右端の二重オーバルリング</strong>）を掛け合わせた全8パターンをご用意しました。
+            </p>
+          </div>
+
+          <!-- コントロール群（ダークモード切替） -->
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3 flex-shrink-0">
+            <button id="logo-theme-toggle" class="inline-flex items-center gap-2 bg-white hover:bg-[#FAF8F5] text-[#38332E] border border-[#D5CBC0] px-4 py-2.5 rounded-full font-sans-jp text-xs shadow-sm transition-all">
+              <span>🌙 ダーク背景で比較する</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- スタイル別 絞り込みフィルター -->
+        <div class="flex flex-wrap items-center gap-2 sm:gap-2.5 mb-8 font-sans-jp text-xs">
+          <span class="text-[#8C827A] font-medium hidden sm:inline mr-1">絞り込み：</span>
+          <button class="logo-filter-btn px-4 py-2 rounded-full bg-[#b8935a] text-white shadow-sm transition-all" data-filter="all">
+            すべて表示（8案）
+          </button>
+          <button class="logo-filter-btn px-4 py-2 rounded-full bg-white text-[#38332E] border border-[#D5CBC0] hover:border-[#b8935a] transition-all flex items-center gap-1.5" data-filter="gold">
+            <span>💛 ゴールド系（4案）</span>
+          </button>
+          <button class="logo-filter-btn px-4 py-2 rounded-full bg-white text-[#38332E] border border-[#D5CBC0] hover:border-[#b8935a] transition-all flex items-center gap-1.5" data-filter="pink">
+            <span>💗 ピンクゴールド系（4案）</span>
+          </button>
+          <button class="logo-filter-btn px-4 py-2 rounded-full bg-white text-[#38332E] border border-[#D5CBC0] hover:border-[#b8935a] transition-all flex items-center gap-1.5" data-filter="basic">
+            <span>💎 シンプル王道（赤枠・3段目）</span>
+          </button>
+          <button class="logo-filter-btn px-4 py-2 rounded-full bg-white text-[#38332E] border border-[#D5CBC0] hover:border-[#b8935a] transition-all flex items-center gap-1.5" data-filter="heart">
+            <span>♡ ハートL字（赤枠・2段目）</span>
+          </button>
+          <button class="logo-filter-btn px-4 py-2 rounded-full bg-white text-[#38332E] border border-[#D5CBC0] hover:border-[#b8935a] transition-all flex items-center gap-1.5" data-filter="ring">
+            <span>✨ オーバルリング（赤枠・1段目）</span>
+          </button>
+        </div>
+
+        <!-- ロゴサンプルカードがJSで展開されるコンテナ（2〜4列グリッド） -->
+        <div id="logo-gallery-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- JSでレンダリング -->
+        </div>
+
+        <div class="mt-8 p-5 rounded-2xl bg-white/90 border border-[#E8DEC0]/60 text-center font-sans-jp text-xs text-[#7A7169] max-w-3xl mx-auto">
+          <p class="leading-relaxed">
+            カードの「このロゴをヘッダーに適用」ボタンを押すと、一番上のヘッダーやフッターのロゴが瞬時に切り替わり、実際のWebサイト上での見え方をご確認いただけます。直感でお好みのバランスをお選びください。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- お悩み共感セクション（チェックリスト反映） -->
+    <section id="concerns" class="py-20 sm:py-24 px-6 sm:px-8 bg-[#FAF8F5]">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-14">
+          <span class="font-serif-en text-xs tracking-[0.3em] text-[#b8935a] uppercase block mb-2">Check List</span>
+          <h2 class="font-serif-jp text-2xl sm:text-3xl text-[#2C2724] font-medium tracking-wider">
+            こんなお悩みを抱えていませんか？
+          </h2>
+          <p class="font-sans-jp text-xs text-[#7A7169] mt-3">年齢のせいだと諦める前に、ルミナへご相談ください</p>
+          <div class="w-12 h-[1px] bg-[#b8935a] mx-auto mt-4"></div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 sm:p-10 border border-[#E8DEC0]/60 shadow-sm space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-sans-jp text-sm text-[#4E4640]">
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-[#FAF8F5]">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#b8935a] flex-shrink-0 mt-0.5"></i>
+              <span>フェイスラインのたるみ、朝晩のむくみが気になる</span>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-[#FAF8F5]">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#b8935a] flex-shrink-0 mt-0.5"></i>
+              <span>肌のくすみ・ハリ不足で、疲れて見られることが増えた</span>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-[#FAF8F5]">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#b8935a] flex-shrink-0 mt-0.5"></i>
+              <span>高価な化粧品を使っても、変化を感じられなくなってきた</span>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-[#FAF8F5]">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#b8935a] flex-shrink-0 mt-0.5"></i>
+              <span>日常のマンネリから抜け出し、イキイキと充実した毎日を送りたい</span>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-[#FAF8F5]">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#b8935a] flex-shrink-0 mt-0.5"></i>
+              <span>いつまでも若々しく、新しい挑戦や出会いを楽しみたい</span>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-[#FAF8F5]">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#b8935a] flex-shrink-0 mt-0.5"></i>
+              <span>しがらみを手放し、そろそろ新しい自分を再スタートしたい</span>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-[#F2ECE4] text-center font-serif-jp">
+            <p class="text-base sm:text-lg text-[#2C2724] leading-relaxed">
+              「新しいことをするのは怖いけれど、大丈夫。きっとうまくいく。」<br />
+              ルミナは、あなたが自分本来の自信を取り戻すための、最初の一歩に寄り添います。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- コンセプト & ストーリー -->
+    <section id="concept" class="py-20 sm:py-28 px-6 sm:px-8 bg-[#F5EFE7]">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <span class="font-serif-en text-xs tracking-[0.3em] text-[#b8935a] uppercase block mb-2">Our Concept</span>
+          <h2 class="font-serif-jp text-2xl sm:text-3xl text-[#2C2724] font-medium tracking-wider">
+            「ルミナ」に込めた約束
+          </h2>
+          <div class="w-12 h-[1px] bg-[#b8935a] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16 items-center">
+          <!-- イメージ写真（修正済みURL） -->
+          <div class="relative">
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl border border-white/60">
+              <img 
+                src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1000&q=80" 
+                alt="ルミナの丁寧なオールハンド施術" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <!-- サブ写真 -->
+            <div class="absolute -bottom-6 -right-6 w-3/5 aspect-square rounded-xl overflow-hidden shadow-2xl border-4 border-[#FAF8F5] hidden sm:block">
+              <img 
+                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" 
+                alt="透明感あふれるスキンケア" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- コンセプト本文 -->
+          <div class="space-y-6">
+            <div class="inline-block bg-[#FAF8F5] text-[#7A6348] text-xs font-sans-jp px-3.5 py-1 rounded-full tracking-wider border border-[#E2D8CC]">
+              内側から輝く、変化のきっかけに
+            </div>
+            <h3 class="font-serif-jp text-xl sm:text-2xl text-[#2C2724] leading-relaxed">
+              迷いから、確かな決断へ。<br />
+              本当の自分らしさを表現できる人生へ、<br />
+              ここから歩き出してみませんか？
+            </h3>
+            
+            <p class="font-sans-jp text-sm sm:text-base text-[#5F5750] leading-relaxed">
+              「ルミナ（LUMINA）」という名前には、人を明るく照らし、内側から輝かせ、人生の変化のきっかけになるという想いが込められています。
+            </p>
+
+            <p class="font-sans-jp text-sm sm:text-base text-[#5F5750] leading-relaxed">
+              日々の忙しさや家族のこと、周りの期待に応える中で、ご自身のことをずっと後回しにしてこられたかもしれません。「大きな転換は少し怖い」「今までやったことがないから不安」と思うのは、ごく自然なことです。
+            </p>
+
+            <p class="font-sans-jp text-sm sm:text-base text-[#5F5750] leading-relaxed">
+              だからこそ、まずはキレイになって、自分の顔に誇りと自信を取り戻してほしい。<br />
+              鏡を見た瞬間、「今日の私、いい感じ」と思えるだけで、万が一うまくいかないことがあっても「何とかなる」と思える強いエネルギーが内側から湧いてきます。
+            </p>
+
+            <p class="font-sans-jp text-sm sm:text-base text-[#5F5750] leading-relaxed">
+              ルミナは流行の表面的なケアではなく、魂のレベルであなたに寄り添い、決して裏切らない姿勢で、本物の美しさを引き出し続けます。
+            </p>
+
+            <div class="pt-4 flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-[#EADDCB] flex items-center justify-center text-[#8C6D3E]">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="font-serif-jp text-sm text-[#2C2724] font-medium">「自分の顔に自信を持てるようになる。絶対。」</p>
+                <p class="text-xs text-[#8C827A] font-sans-jp">あなたの心に正直になれる、あたたかな居場所をご用意しています</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3つのこだわり (Commitment) -->
+    <section id="commitment" class="py-20 sm:py-28 px-6 sm:px-8 bg-[#FAF8F5]">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <span class="font-serif-en text-xs tracking-[0.3em] text-[#b8935a] uppercase block mb-2">Our Commitment</span>
+          <h2 class="font-serif-jp text-2xl sm:text-3xl text-[#2C2724] font-medium tracking-wider">
+            ルミナが大切にする3つの約束
+          </h2>
+          <p class="font-sans-jp text-xs text-[#7A7169] mt-3 tracking-wider">結果と居心地の良さを妥協しない、プロフェッショナルの誇り</p>
+          <div class="w-12 h-[1px] bg-[#b8935a] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- こだわり 1 -->
+          <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border border-[#E8DEC0]/40 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-serif-en text-4xl text-[#C5A880] font-light">01</span>
+                <span class="p-3 bg-[#FAF8F5] rounded-full text-[#b8935a]">
+                  <i data-lucide="heart" class="w-5 h-5"></i>
+                </span>
+              </div>
+              <h3 class="font-serif-jp text-lg text-[#2C2724] font-medium mb-3">
+                完全個室・1対1の<br />パーソナルオーダーメイド
+              </h3>
+              <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+                他のお客様と顔を合わせることのない静かなプライベート空間。現在のお悩みや生活習慣、肌質をじっくり伺い、お一人おひとりに合わせた最適な手技と美容液を選定します。
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#F2ECE4] text-[11px] text-[#8C827A] font-sans-jp">
+              ✓ 人目を気にせず深いリラックスを
+            </div>
+          </div>
+
+          <!-- こだわり 2 -->
+          <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border border-[#E8DEC0]/40 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-serif-en text-4xl text-[#C5A880] font-light">02</span>
+                <span class="p-3 bg-[#FAF8F5] rounded-full text-[#b8935a]">
+                  <i data-lucide="award" class="w-5 h-5"></i>
+                </span>
+              </div>
+              <h3 class="font-serif-jp text-lg text-[#2C2724] font-medium mb-3">
+                魂のレベルで寄り添う<br />本格手技と結果への追求
+              </h3>
+              <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+                表面的な一時しのぎではなく、肌構造・解剖生理学に基づいた確かな技術。手のひらを通してお肌のサインを受け止め、たるみやむくみを根本から引き上げ、内側から澄みわたる素肌へ導きます。
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#F2ECE4] text-[11px] text-[#8C827A] font-sans-jp">
+              ✓ 継続して通うほど素肌力が育つ設計
+            </div>
+          </div>
+
+          <!-- こだわり 3 -->
+          <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border border-[#E8DEC0]/40 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-serif-en text-4xl text-[#C5A880] font-light">03</span>
+                <span class="p-3 bg-[#FAF8F5] rounded-full text-[#b8935a]">
+                  <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </span>
+              </div>
+              <h3 class="font-serif-jp text-lg text-[#2C2724] font-medium mb-3">
+                無理な勧誘ゼロと<br />温もりあふれる信頼関係
+              </h3>
+              <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+                高額コースの強引な勧誘や不要な化粧品販売は一切いたしません。「あなたのために全力を尽くす」という誠実さを何よりも大切にし、安心して通い続けられる信頼関係を築きます。
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#F2ECE4] text-[11px] text-[#8C827A] font-sans-jp">
+              ✓ 初めての方でも安心の明朗会計
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 施術メニュー・料金表 -->
+    <section id="menu" class="py-20 sm:py-28 px-6 sm:px-8 bg-[#F5EFE7]">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <span class="font-serif-en text-xs tracking-[0.3em] text-[#b8935a] uppercase block mb-2">Celangel Beauty Menu</span>
+          <h2 class="font-serif-jp text-2xl sm:text-3xl text-[#2C2724] font-medium tracking-wider">
+            細くなり、美しくなる。<br />コース・料金のご案内
+          </h2>
+          <p class="font-sans-jp text-xs sm:text-sm text-[#7A7169] mt-3 leading-relaxed">
+            Celestial（天空）＋ Angel（天使）から名付けられたセランジェル。<br />
+            透明感・ハリ・艶、そして理想のフェイスラインへ導く特別なトリートメントです。
+          </p>
+          <div class="w-12 h-[1px] bg-[#b8935a] mx-auto mt-4"></div>
+        </div>
+
+        <!-- カテゴリ切り替えタブ -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 font-sans-jp text-xs sm:text-sm">
+          <button class="menu-tab px-5 py-2.5 rounded-full bg-[#b8935a] text-white shadow-sm transition-all duration-200" data-target="all">
+            すべてのメニュー
+          </button>
+          <button class="menu-tab px-5 py-2.5 rounded-full bg-white text-[#38332E] border border-[#D5CBC0] hover:border-[#b8935a] transition-all duration-200" data-target="face">
+            フェイスラインケア
+          </button>
+          <button class="menu-tab px-5 py-2.5 rounded-full bg-white text-[#38332E] border border-[#D5CBC0] hover:border-[#b8935a] transition-all duration-200" data-target="premium">
+            プレミアム6回コース（豪華特典付）
+          </button>
+          <button class="menu-tab px-5 py-2.5 rounded-full bg-white text-[#38332E] border border-[#D5CBC0] hover:border-[#b8935a] transition-all duration-200" data-target="body">
+            ボディ打ち放題
+          </button>
+        </div>
+
+        <!-- メニュー一覧 -->
+        <div class="space-y-6">
+
+          <!-- 1. Celangel Line（3,000円） -->
+          <div class="menu-group bg-white rounded-2xl p-6 sm:p-8 border border-[#E8DEC0]/60 shadow-sm" data-category="face">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div class="space-y-2 max-w-xl">
+                <div class="inline-flex items-center gap-1.5 text-xs font-sans-jp text-[#b8935a] font-medium tracking-wider">
+                  <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                  <span>フェイスデザインケア</span>
+                </div>
+                <h3 class="font-serif-jp text-xl sm:text-2xl text-[#2C2724] font-medium">
+                  Celangel Line（セランジェルライン）
+                </h3>
+                <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+                  理想のフェイスラインへ導くフェイスデザインケア。フェイスラインのもたつきやむくみを心地よく整え、すっきりとした印象の美しい輪郭へ整えます。初めての方にもお試しいただきやすい基本プランです。
+                </p>
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <span class="text-[11px] font-sans-jp bg-[#FAF8F5] text-[#7A7169] px-2.5 py-1 rounded border border-[#E8E2D9]">フェイスラインケア</span>
+                  <span class="text-[11px] font-sans-jp bg-[#FAF8F5] text-[#7A7169] px-2.5 py-1 rounded border border-[#E8E2D9]">むくみ解消</span>
+                  <span class="text-[11px] font-sans-jp bg-[#FAF8F5] text-[#7A7169] px-2.5 py-1 rounded border border-[#E8E2D9]">気軽なケア</span>
+                </div>
+              </div>
+              <div class="flex md:flex-col items-end justify-between md:justify-center border-t md:border-t-0 md:border-l border-[#EAE3D9] pt-4 md:pt-0 md:pl-8 min-w-[200px]">
+                <div class="text-left md:text-right font-sans-jp">
+                  <span class="text-xs text-[#8C827A] block">1回 単発ケア</span>
+                  <div class="text-2xl sm:text-3xl font-bold text-[#b8935a]">
+                    ¥3,000<span class="text-xs font-normal text-[#5F5750]">（税込）</span>
+                  </div>
+                </div>
+                <a href="#reservation" class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#b8935a] hover:bg-[#a07e49] text-white text-xs px-5 py-2.5 rounded-full font-sans-jp transition-colors">
+                  <span>予約する</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Celangel face slim Line（6,000円） -->
+          <div class="menu-group bg-white rounded-2xl p-6 sm:p-8 border border-[#E8DEC0]/60 shadow-sm" data-category="face">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div class="space-y-2 max-w-xl">
+                <div class="inline-flex items-center gap-1.5 text-xs font-sans-jp text-[#b8935a] font-medium tracking-wider">
+                  <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                  <span>集中フェイスデザイン</span>
+                </div>
+                <h3 class="font-serif-jp text-xl sm:text-2xl text-[#2C2724] font-medium">
+                  Celangel face slim Line
+                </h3>
+                <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+                  フェイスラインをハッキリ出したい方へ。より深く、シャープな輪郭づくりに特化した集中トリートメント。あご下のもたつきや頬のたるみに徹底的に働きかけ、くっきりとした小顔シルエットを叶えます。
+                </p>
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <span class="text-[11px] font-sans-jp bg-[#FAF8F5] text-[#7A7169] px-2.5 py-1 rounded border border-[#E8E2D9]">フェイスラインをハッキリ出したい方へ</span>
+                  <span class="text-[11px] font-sans-jp bg-[#FAF8F5] text-[#7A7169] px-2.5 py-1 rounded border border-[#E8E2D9]">引き締め</span>
+                  <span class="text-[11px] font-sans-jp bg-[#FAF8F5] text-[#7A7169] px-2.5 py-1 rounded border border-[#E8E2D9]">小顔リフト</span>
+                </div>
+              </div>
+              <div class="flex md:flex-col items-end justify-between md:justify-center border-t md:border-t-0 md:border-l border-[#EAE3D9] pt-4 md:pt-0 md:pl-8 min-w-[200px]">
+                <div class="text-left md:text-right font-sans-jp">
+                  <span class="text-xs text-[#8C827A] block">1回 集中ケア</span>
+                  <div class="text-2xl sm:text-3xl font-bold text-[#2C2724]">
+                    ¥6,000<span class="text-xs font-normal text-[#5F5750]">（税込）</span>
+                  </div>
+                </div>
+                <a href="#reservation" class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#38332E] hover:text-white border border-[#D5CBC0] text-xs px-5 py-2.5 rounded-full font-sans-jp transition-all">
+                  <span>予約する</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Celangel Face コース（6回 15,000円） -->
+          <div class="menu-group bg-white rounded-2xl p-6 sm:p-8 border border-[#E8DEC0]/60 shadow-sm relative overflow-hidden" data-category="premium">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div class="space-y-3 max-w-xl">
+                <div class="inline-flex items-center gap-1.5 text-xs font-sans-jp text-[#b8935a] font-medium tracking-wider">
+                  <span class="bg-[#b8935a] text-white text-[10px] px-2 py-0.5 rounded font-bold">Premium Course</span>
+                  <span>透明感・ハリ・艶フェイシャル 6回プラン</span>
+                </div>
+                <h3 class="font-serif-jp text-xl sm:text-2xl text-[#2C2724] font-medium">
+                  Celangel Face コース（6回）
+                </h3>
+                <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+                  透明感・ハリ・艶を肌の奥から呼び覚ますフェイシャルトリートメントの6回継続コース。回数を重ねるごとに素肌そのものがふっくらと健やかに生まれ変わり、鏡を見るのが楽しみに。
+                </p>
+                <!-- 特典ボックス -->
+                <div class="p-3.5 rounded-xl bg-gradient-to-r from-[#FAF8F5] to-[#F5EFE6] border border-[#E2D8CC] flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-[#b8935a]/15 text-[#b8935a] flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                  </div>
+                  <div class="font-sans-jp text-xs text-[#38332E]">
+                    <span class="font-bold text-[#b8935a]">【豪華コース特典】</span>
+                    <span>超高濃度天然セラミド「プラスワン」（6,600円相当）をプレゼント</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex md:flex-col items-end justify-between md:justify-center border-t md:border-t-0 md:border-l border-[#EAE3D9] pt-4 md:pt-0 md:pl-8 min-w-[200px]">
+                <div class="text-left md:text-right font-sans-jp">
+                  <span class="text-xs text-[#8C827A] block">全6回コース（1回あたり¥2,500）</span>
+                  <div class="text-2xl sm:text-3xl font-bold text-[#2C2724]">
+                    ¥15,000<span class="text-xs font-normal text-[#5F5750]">（税込）</span>
+                  </div>
+                </div>
+                <a href="#reservation" class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#38332E] hover:text-white border border-[#D5CBC0] text-xs px-5 py-2.5 rounded-full font-sans-jp transition-all">
+                  <span>予約する</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Celangel face slim Line コース（6回 36,000円） -->
+          <div class="menu-group bg-white rounded-2xl p-6 sm:p-8 border border-[#E8DEC0]/60 shadow-sm relative overflow-hidden" data-category="premium">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div class="space-y-3 max-w-xl">
+                <div class="inline-flex items-center gap-1.5 text-xs font-sans-jp text-[#b8935a] font-medium tracking-wider">
+                  <span class="bg-[#b8935a] text-white text-[10px] px-2 py-0.5 rounded font-bold">Premium Course</span>
+                  <span>小顔・フェイスライン定着 6回プラン</span>
+                </div>
+                <h3 class="font-serif-jp text-xl sm:text-2xl text-[#2C2724] font-medium">
+                  Celangel face slim Line コース（6回）
+                </h3>
+                <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+                  フェイスラインをハッキリ際立たせ、すっきりとした小顔シルエットをしっかり定着させる6回集中プラン。たるみに負けない引き締まった輪郭を継続的にキープします。
+                </p>
+                <!-- 特典ボックス -->
+                <div class="p-3.5 rounded-xl bg-gradient-to-r from-[#FAF8F5] to-[#F5EFE6] border border-[#E2D8CC] flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-[#b8935a]/15 text-[#b8935a] flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                  </div>
+                  <div class="font-sans-jp text-xs text-[#38332E]">
+                    <span class="font-bold text-[#b8935a]">【豪華コース特典】</span>
+                    <span>業界最高濃度EGF「ヒシマクエッセンス」（13,200円相当）をプレゼント</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex md:flex-col items-end justify-between md:justify-center border-t md:border-t-0 md:border-l border-[#EAE3D9] pt-4 md:pt-0 md:pl-8 min-w-[200px]">
+                <div class="text-left md:text-right font-sans-jp">
+                  <span class="text-xs text-[#8C827A] block">全6回コース</span>
+                  <div class="text-2xl sm:text-3xl font-bold text-[#2C2724]">
+                    ¥36,000<span class="text-xs font-normal text-[#5F5750]">（税込）</span>
+                  </div>
+                </div>
+                <a href="#reservation" class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#38332E] hover:text-white border border-[#D5CBC0] text-xs px-5 py-2.5 rounded-full font-sans-jp transition-all">
+                  <span>予約する</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Celangel Premium（Face + slim Line）各6回 50,000円 【一押し・最高峰】 -->
+          <div class="menu-group bg-white rounded-2xl p-6 sm:p-8 border-2 border-[#b8935a] shadow-lg relative overflow-hidden" data-category="premium">
+            <div class="absolute top-0 right-0 bg-gold-gradient text-white text-[10px] sm:text-xs font-bold tracking-wider px-4 py-1 rounded-bl-lg font-sans-jp">
+              一番人気・最高峰トータルプラン
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div class="space-y-3 max-w-xl">
+                <div class="inline-flex items-center gap-1.5 text-xs font-sans-jp text-[#b8935a] font-medium tracking-wider">
+                  <span class="bg-[#b8935a] text-white text-[10px] px-2 py-0.5 rounded font-bold">Special Premium</span>
+                  <span>美肌 Face ＋ 小顔 slim Line ダブル集中</span>
+                </div>
+                <h3 class="font-serif-jp text-xl sm:text-2xl text-[#2C2724] font-medium">
+                  Celangel Premium（Face ＋ slim Line）
+                </h3>
+                <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+                  透明感・ハリ・艶を育む「Face」と、シャープなフェイスラインを創る「slim Line」を各6回組み合わせた極上プレミアムコース。肌質とフェイスラインの両面から劇的な変化を実感していただける最高峰プランです。
+                </p>
+                <!-- 豪華特典ボックス -->
+                <div class="p-4 rounded-xl bg-gradient-to-r from-[#FAF8F5] via-[#FFFDF9] to-[#F5EFE6] border border-[#b8935a]/50 shadow-sm flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-full bg-[#b8935a] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                  </div>
+                  <div class="font-sans-jp text-xs text-[#38332E]">
+                    <span class="font-bold text-[#b8935a] block mb-0.5">【特大プレゼント特典】計38,500円相当！</span>
+                    <span>業界最高濃度EGF ＋ 高濃度ヒアルロン酸EGF（38,500円相当）をダブルプレゼント</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex md:flex-col items-end justify-between md:justify-center border-t md:border-t-0 md:border-l border-[#EAE3D9] pt-4 md:pt-0 md:pl-8 min-w-[200px]">
+                <div class="text-left md:text-right font-sans-jp">
+                  <span class="text-xs text-[#b8935a] font-bold block">Face 6回 ＋ slim Line 6回</span>
+                  <div class="text-2xl sm:text-3xl font-bold text-[#b8935a]">
+                    各6回 ¥50,000<span class="text-xs font-normal text-[#5F5750]">（税込）</span>
+                  </div>
+                </div>
+                <a href="#reservation" class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#b8935a] hover:bg-[#a07e49] text-white text-xs px-6 py-2.5 rounded-full font-sans-jp shadow transition-all">
+                  <span>予約する</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Celangel Body（首から下 打ち放題 55,000円） -->
+          <div class="menu-group bg-white rounded-2xl p-6 sm:p-8 border border-[#E8DEC0]/60 shadow-sm" data-category="body">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div class="space-y-3 max-w-xl">
+                <div class="inline-flex items-center gap-1.5 text-xs font-sans-jp text-[#b8935a] font-medium tracking-wider">
+                  <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                  <span>首から下 全身ボディトリートメント</span>
+                </div>
+                <h3 class="font-serif-jp text-xl sm:text-2xl text-[#2C2724] font-medium">
+                  Celangel Body（首から下 打ち放題）
+                </h3>
+                <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+                  Celangel Body Premium Bottleを使用し、首から下の気になる部位を徹底的にケアできる贅沢な打ち放題コース。二の腕、お腹まわり、ヒップ、太もも、ふくらはぎなど、全身の引き締まりとすっきりとしたボディラインを叶えます。
+                </p>
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <span class="text-[11px] font-sans-jp bg-[#FAF8F5] text-[#7A7169] px-2.5 py-1 rounded border border-[#E8E2D9]">首から下 打ち放題</span>
+                  <span class="text-[11px] font-sans-jp bg-[#FAF8F5] text-[#7A7169] px-2.5 py-1 rounded border border-[#E8E2D9]">Celangel Body Premium Bottle</span>
+                  <span class="text-[11px] font-sans-jp bg-[#FAF8F5] text-[#7A7169] px-2.5 py-1 rounded border border-[#E8E2D9]">全身ボディメイク</span>
+                </div>
+              </div>
+              <div class="flex md:flex-col items-end justify-between md:justify-center border-t md:border-t-0 md:border-l border-[#EAE3D9] pt-4 md:pt-0 md:pl-8 min-w-[200px]">
+                <div class="text-left md:text-right font-sans-jp">
+                  <span class="text-xs text-[#8C827A] block">Premium Bottle</span>
+                  <div class="text-2xl sm:text-3xl font-bold text-[#2C2724]">
+                    ¥55,000<span class="text-xs font-normal text-[#5F5750]">（税込）</span>
+                  </div>
+                </div>
+                <a href="#reservation" class="open-reservation-btn mt-3 inline-flex items-center gap-1.5 bg-[#FAF8F5] hover:bg-[#b8935a] text-[#38332E] hover:text-white border border-[#D5CBC0] text-xs px-5 py-2.5 rounded-full font-sans-jp transition-all">
+                  <span>予約する</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-10">
+          <p class="text-xs text-[#7A7169] font-sans-jp mb-4">どのコースを選べばいいか迷われる方は、当日カウンセリングでお悩みや肌状態を伺いながら最適なメニューをご提案いたします。</p>
+          <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-sans-jp text-[#06C755] hover:underline font-medium">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>LINEでメニューやお悩みの事前相談をする（無料）</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- お客様の声 (Voice & Review) -->
+    <section id="voice" class="py-20 sm:py-28 px-6 sm:px-8 bg-[#FAF8F5]">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <span class="font-serif-en text-xs tracking-[0.3em] text-[#b8935a] uppercase block mb-2">Customer Voice</span>
+          <h2 class="font-serif-jp text-2xl sm:text-3xl text-[#2C2724] font-medium tracking-wider">
+            お客様からの嬉しいお声
+          </h2>
+          <p class="font-sans-jp text-xs text-[#7A7169] mt-3">年齢を重ねるごとに輝きを増しているお客様のリアルな体験談</p>
+          <div class="w-12 h-[1px] bg-[#b8935a] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- 声 1 -->
+          <div class="bg-white rounded-2xl p-7 shadow-sm border border-[#E8DEC0]/40 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-[#C5A880] mb-4">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <h3 class="font-serif-jp text-base font-medium text-[#2C2724] mb-3">
+                「疲れて見られていた顔が明るくなり、毎日が前向きに」
+              </h3>
+              <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+                50代に入ってから、くすみとたるみでいつも疲れた表情に見えるのがコンプレックスでした。ルミナさんの施術後は肌が内側からパーンと光を帯びたように明るくなり、友人からも『何か始めたの？若返った！』と褒められました。
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-[#F2ECE4] flex items-center justify-between font-sans-jp text-xs text-[#8C827A]">
+              <span>50代・主婦</span>
+              <span>Celangel Faceコース</span>
+            </div>
+          </div>
+
+          <!-- 声 2 -->
+          <div class="bg-white rounded-2xl p-7 shadow-sm border border-[#E8DEC0]/40 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-[#C5A880] mb-4">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <h3 class="font-serif-jp text-base font-medium text-[#2C2724] mb-3">
+                「1回でフェイスラインがキュッと上がり、驚きました」
+              </h3>
+              <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+                たるみとむくみが気になりCelangel face slim Lineを受けました。手の密着感と心地よい引き締めが絶妙で、凝り固まった表情筋がふわっとほどけていく感覚。施術後は目がパッチリ開き、輪郭が引き締まって自分に自信が持てました。
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-[#F2ECE4] flex items-center justify-between font-sans-jp text-xs text-[#8C827A]">
+              <span>40代・会社員</span>
+              <span>Celangel face slim Line</span>
+            </div>
+          </div>
+
+          <!-- 声 3 -->
+          <div class="bg-white rounded-2xl p-7 shadow-sm border border-[#E8DEC0]/40 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-[#C5A880] mb-4">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <h3 class="font-serif-jp text-base font-medium text-[#2C2724] mb-3">
+                「心まで温かく包み込まれ、新しい人生を踏み出せました」
+              </h3>
+              <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+                完全プライベートで誰の目も気にせずリラックスできます。オーナー様が親身に寄り添ってくださり、無理な勧誘もゼロ。プレミアムコース特典の美容液も本当に素晴らしく、ここに来ると気持ちまで前向きになれる大切な充電場所です。
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-[#F2ECE4] flex items-center justify-between font-sans-jp text-xs text-[#8C827A]">
+              <span>60代・自営業</span>
+              <span>Celangel Premium各6回</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- オーナー・セラピスト紹介 (Profile) -->
+    <section id="therapist" class="py-20 sm:py-28 px-6 sm:px-8 bg-[#F5EFE7]">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <span class="font-serif-en text-xs tracking-[0.3em] text-[#b8935a] uppercase block mb-2">Therapist Profile</span>
+          <h2 class="font-serif-jp text-2xl sm:text-3xl text-[#2C2724] font-medium tracking-wider">
+            オーナーセラピストからの手紙
+          </h2>
+          <div class="w-12 h-[1px] bg-[#b8935a] mx-auto mt-4"></div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-[#E8DEC0]/60 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          
+          <!-- 写真 -->
+          <div class="md:col-span-5 flex flex-col items-center">
+            <div class="w-full max-w-[300px] aspect-[3/4] rounded-2xl overflow-hidden shadow-md relative">
+              <img 
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+                alt="ルミナ オーナーセラピスト" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="text-center mt-4">
+              <span class="font-serif-en text-sm tracking-widest text-[#b8935a] uppercase block">Owner Therapist</span>
+              <p class="font-serif-jp text-lg font-medium text-[#2C2724]">ルミナ 代表セラピスト</p>
+            </div>
+          </div>
+
+          <!-- メッセージ -->
+          <div class="md:col-span-7 space-y-4">
+            <div class="inline-block text-xs font-sans-jp text-[#8C6D3E] font-medium tracking-wider bg-[#F5EFE6] px-3 py-1 rounded-full">
+              「私を見て。ほら、大丈夫でしょう？」
+            </div>
+
+            <h3 class="font-serif-jp text-xl sm:text-2xl text-[#2C2724] font-medium leading-relaxed">
+              新しいことをするのは怖いけれど、大丈夫。<br />
+              あなたの心に、正直になっていいんです。
+            </h3>
+
+            <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+              エステサロンを立ち上げるにあたり、私が一番大切にしてきたのは「女性が自分本来の輝きを取り戻し、笑顔で新しい一歩を踏み出す瞬間」です。
+            </p>
+
+            <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+              年齢を重ねる中で「そろそろ新しい人生を再スタートしたい」「でも変わるのが怖い」と悩む女性をたくさん見てきました。私自身も迷い葛藤した時期があるからこそ、そのお気持ちが痛いほどよくわかります。
+            </p>
+
+            <p class="font-sans-jp text-xs sm:text-sm text-[#5F5750] leading-relaxed">
+              だからこそ、私はあなたのために全力を尽くします。<br />
+              魂のレベルでお悩みに寄り添い、決して裏切らない確かな手技で、まずはお顔から自信をつけていただく。<br />
+              「万が一うまくいかないことがあっても、私なら何とかなる」と思える強い自分へ。あなたの変化の伴走者として、心を込めてお手伝いいたします。
+            </p>
+
+            <!-- 資格・こだわりバッジ -->
+            <div class="pt-4 border-t border-[#F2ECE4] grid grid-cols-2 gap-3 text-xs font-sans-jp text-[#7A7169]">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-[#b8935a]"></i>
+                <span>日本エステティック協会 認定セラピスト</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-[#b8935a]"></i>
+                <span>歴10年以上・延べ3,000人超の施術実績</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-[#b8935a]"></i>
+                <span>肌構造・解剖生理学に基づいた本格手技</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-[#b8935a]"></i>
+                <span>オーガニック・低刺激商材厳選</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 施術の流れ (Flow) -->
+    <section class="py-20 sm:py-28 px-6 sm:px-8 bg-[#FAF8F5]">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <span class="font-serif-en text-xs tracking-[0.3em] text-[#b8935a] uppercase block mb-2">Step Flow</span>
+          <h2 class="font-serif-jp text-2xl sm:text-3xl text-[#2C2724] font-medium tracking-wider">
+            ご来店からお帰りまでの流れ
+          </h2>
+          <p class="font-sans-jp text-xs text-[#7A7169] mt-3">初めての方もどうぞ安心してお越しください</p>
+          <div class="w-12 h-[1px] bg-[#b8935a] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#E8DEC0]/40 relative">
+            <span class="font-serif-en text-3xl text-[#C5A880] block mb-3">STEP 01</span>
+            <h3 class="font-serif-jp text-base font-medium text-[#2C2724] mb-2">カウンセリング・肌診断</h3>
+            <p class="font-sans-jp text-xs text-[#5F5750] leading-relaxed">
+              ウェルカムハーブティーを飲みながら、現在のお悩みや日頃のスキンケアについて丁寧にお伺いします。
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#E8DEC0]/40 relative">
+            <span class="font-serif-en text-3xl text-[#C5A880] block mb-3">STEP 02</span>
+            <h3 class="font-serif-jp text-base font-medium text-[#2C2724] mb-2">お着替え・クレンジング</h3>
+            <p class="font-sans-jp text-xs text-[#5F5750] leading-relaxed">
+              専用のガウンにお着替えいただき、ふかふかのベッドへ。肌に負担をかけない優しいタッチでメイクをオフします。
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#E8DEC0]/40 relative">
+            <span class="font-serif-en text-3xl text-[#C5A880] block mb-3">STEP 03</span>
+            <h3 class="font-serif-jp text-base font-medium text-[#2C2724] mb-2">オーダーメイド本格施術</h3>
+            <p class="font-sans-jp text-xs text-[#5F5750] leading-relaxed">
+              密着感あふれる本格オールハンド手技と高濃度美容成分の導入。心地よい香りと音楽の中、至福の時間をお過ごしください。
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#E8DEC0]/40 relative">
+            <span class="font-serif-en text-3xl text-[#C5A880] block mb-3">STEP 04</span>
+            <h3 class="font-serif-jp text-base font-medium text-[#2C2724] mb-2">アフターティー・美肌アドバイス</h3>
+            <p class="font-sans-jp text-xs text-[#5F5750] leading-relaxed">
+              施術後の肌の変化を確認。ご自宅で無理なく続けられるホームケアのコツをお伝えします。メイク直しスペース完備。
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- よくある質問 (FAQ) -->
+    <section id="faq" class="py-20 sm:py-28 px-6 sm:px-8 bg-[#F5EFE7]">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <span class="font-serif-en text-xs tracking-[0.3em] text-[#b8935a] uppercase block mb-2">Q & A</span>
+          <h2 class="font-serif-jp text-2xl sm:text-3xl text-[#2C2724] font-medium tracking-wider">
+            よくあるご質問
+          </h2>
+          <div class="w-12 h-[1px] bg-[#b8935a] mx-auto mt-4"></div>
+        </div>
+
+        <div class="space-y-4 font-sans-jp">
+          
+          <div class="bg-white rounded-xl border border-[#E8E2D9] overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="text-sm sm:text-base font-medium text-[#2C2724] flex items-center gap-3">
+                <span class="text-[#b8935a] font-serif-en text-lg font-bold">Q.</span>
+                敏感肌や年齢肌でも施術を受けられますか？
+              </span>
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-[#8C827A] transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#5F5750] leading-relaxed border-t border-[#FAF8F5] pt-3">
+              はい、安心してお越しください。事前のカウンセリングでお肌の状態を細かくチェックし、低刺激でオーガニックな商材を選定して施術を行います。当日の肌荒れが心配な場合は、パッチテストや刺激の少ないコースへの変更も柔軟に対応いたします。
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl border border-[#E8E2D9] overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="text-sm sm:text-base font-medium text-[#2C2724] flex items-center gap-3">
+                <span class="text-[#b8935a] font-serif-en text-lg font-bold">Q.</span>
+                当日はメイクをしたまま行っても大丈夫ですか？
+              </span>
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-[#8C827A] transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#5F5750] leading-relaxed border-t border-[#FAF8F5] pt-3">
+              はい、メイクをしたままご来店いただいて全く問題ございません。すべてのコースで丁寧なプロのクレンジングから始めます。施術後にお出かけされる場合は、メイク直しスペースにドライヤーや日焼け止め等を完備しておりますのでご利用ください（ご自身のメイク道具をご持参ください）。
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl border border-[#E8E2D9] overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="text-sm sm:text-base font-medium text-[#2C2724] flex items-center gap-3">
+                <span class="text-[#b8935a] font-serif-en text-lg font-bold">Q.</span>
+                高額なコース契約や化粧品の勧誘はありますか？
+              </span>
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-[#8C827A] transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#5F5750] leading-relaxed border-t border-[#FAF8F5] pt-3">
+              一切ございません。当店は都度払いを基本としており、お客様が心から通いたいと感じたペースで無理なく続けられることを最も大切にしています。ご希望の方にのみ、よりお得に通えるチケットや最適なホームケア製品をご紹介しております。
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl border border-[#E8E2D9] overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="text-sm sm:text-base font-medium text-[#2C2724] flex items-center gap-3">
+                <span class="text-[#b8935a] font-serif-en text-lg font-bold">Q.</span>
+                支払い方法は何が使えますか？
+              </span>
+              <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-[#8C827A] transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#5F5750] leading-relaxed border-t border-[#FAF8F5] pt-3">
+              現金のほか、各種クレジットカード（VISA、Mastercard、JCB、American Express、Diners）、PayPayなどの主要QR決済、交通系ICカードに対応しております。
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- サロン情報 & アクセス -->
+    <section id="access" class="py-20 sm:py-28 px-6 sm:px-8 bg-[#FAF8F5]">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <span class="font-serif-en text-xs tracking-[0.3em] text-[#b8935a] uppercase block mb-2">Salon Info & Access</span>
+          <h2 class="font-serif-jp text-2xl sm:text-3xl text-[#2C2724] font-medium tracking-wider">
+            サロン情報・アクセス
+          </h2>
+          <div class="w-12 h-[1px] bg-[#b8935a] mx-auto mt-4"></div>
+        </div>
+
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-[#E8DEC0]/60 grid grid-cols-1 md:grid-cols-2">
+          
+          <!-- サロン詳細表 -->
+          <div class="p-8 sm:p-10 space-y-6 font-sans-jp text-xs sm:text-sm">
+            <div>
+              <span class="font-serif-en tracking-widest text-lg text-[#2C2724] block mb-1">private esthetic salon LUMINA</span>
+              <span class="text-xs text-[#8C827A]">プライベートエステサロン ルミナ</span>
+            </div>
+
+            <dl class="space-y-4 border-t border-[#F2ECE4] pt-4">
+              <div class="flex">
+                <dt class="w-24 text-[#8C827A] flex-shrink-0">所在地</dt>
+                <dd class="text-[#38332E]">
+                  〒000-0000<br />
+                  東京都渋谷区神宮前（※プライベートサロンのため、詳細住所はご予約完了後にお伝えいたします）
+                </dd>
+              </div>
+              <div class="flex">
+                <dt class="w-24 text-[#8C827A] flex-shrink-0">最寄り駅</dt>
+                <dd class="text-[#38332E]">
+                  東京メトロ「表参道駅」A2出口より徒歩4分<br />
+                  JR「原宿駅」表参道口より徒歩8分
+                </dd>
+              </div>
+              <div class="flex">
+                <dt class="w-24 text-[#8C827A] flex-shrink-0">営業時間</dt>
+                <dd class="text-[#38332E]">
+                  10:00 〜 20:00（最終受付 18:30）
+                </dd>
+              </div>
+              <div class="flex">
+                <dt class="w-24 text-[#8C827A] flex-shrink-0">定休日</dt>
+                <dd class="text-[#38332E]">不定休（完全予約制）</dd>
+              </div>
+              <div class="flex">
+                <dt class="w-24 text-[#8C827A] flex-shrink-0">設備・特徴</dt>
+                <dd class="text-[#38332E]">完全個室・女性専用・パウダールーム完備・ドリンクサービス有</dd>
+              </div>
+            </dl>
+
+            <div class="pt-2">
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-[#b8935a] hover:underline font-medium">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+                <span>Google Mapsで周辺ルートを確認</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- マップ / サロン内観プレースホルダ -->
+          <div class="relative min-h-[300px] bg-[#EAE3D9]">
+            <img 
+              src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=800&q=80" 
+              alt="ルミナのサロン空間" 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end p-6">
+              <p class="text-white text-xs font-sans-jp tracking-wider">
+                都会の喧騒を離れた、光とアロマが香るプライベート空間
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 予約・お問い合わせ CTAセクション -->
+    <section id="reservation" class="py-20 sm:py-28 px-6 sm:px-8 bg-gradient-to-b from-[#FAF8F5] to-[#F3EFEA] text-center">
+      <div class="max-w-3xl mx-auto">
+        <span class="font-serif-en text-xs tracking-[0.3em] text-[#b8935a] uppercase block mb-3">Reservation</span>
+        <h2 class="font-serif-jp text-2xl sm:text-3xl md:text-4xl text-[#2C2724] font-medium leading-relaxed mb-6">
+          今日が、新しいあなたと出逢う<br />
+          一番若い日。
+        </h2>
+        <p class="font-sans-jp text-sm sm:text-base text-[#5F5750] leading-relaxed mb-10 max-w-xl mx-auto">
+          迷いを手放し、ご自身を大切にする贅沢な時間をプレゼントしませんか？<br />
+          ご予約・空き状況の確認は、WEBまたは公式LINEより24時間いつでも承っております。
+        </p>
+
+        <!-- 2大予約ボタン -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-8 font-sans-jp">
+          <!-- WEB予約 -->
+          <button class="open-reservation-btn w-full bg-[#b8935a] hover:bg-[#a07e49] text-white py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center gap-1 group">
+            <span class="text-xs tracking-wider opacity-90">24時間即時確定</span>
+            <span class="text-base font-bold flex items-center gap-2">
+              <i data-lucide="calendar" class="w-5 h-5"></i>
+              <span>WEBでオンライン予約</span>
+            </span>
+          </button>
+
+          <!-- LINE予約 -->
+          <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="w-full bg-[#06C755] hover:bg-[#05b34c] text-white py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center gap-1 group">
+            <span class="text-xs tracking-wider opacity-90">事前のお悩み相談も受付中</span>
+            <span class="text-base font-bold flex items-center gap-2">
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+              <span>公式LINEから予約・相談</span>
+            </span>
+          </a>
+        </div>
+
+        <p class="text-xs text-[#8C827A] font-sans-jp">
+          ※お電話でのご予約・お問い合わせも承っております：
+          <a href="tel:03-0000-0000" class="hover:text-[#b8935a] underline">03-0000-0000</a>（施術中は折り返しとなります）
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-[#2C2724] text-[#C4BCB5] py-14 px-6 sm:px-8 font-sans-jp text-xs">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 border-b border-[#443D37] pb-10">
+      
+      <div class="text-center md:text-left flex flex-col items-center md:items-start">
+        <div id="footer-logo-container" class="w-[200px] mb-2">
+          <!-- JSで動的レンダリング -->
+        </div>
+        <p class="mt-2 text-[#A69C94] leading-relaxed max-w-sm">
+          光をまとう美しさ。あなた本来の魅力を引き出すプライベートエステサロン「ルミナ」
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-6 text-[#D5CBC0]">
+        <a href="#concept" class="hover:text-white transition-colors">想い</a>
+        <a href="#concerns" class="hover:text-white transition-colors">お悩み</a>
+        <a href="#commitment" class="hover:text-white transition-colors">3つの約束</a>
+        <a href="#menu" class="hover:text-white transition-colors">メニュー</a>
+        <a href="#voice" class="hover:text-white transition-colors">お客様の声</a>
+        <a href="#therapist" class="hover:text-white transition-colors">セラピスト</a>
+        <a href="#access" class="hover:text-white transition-colors">サロン情報</a>
+        <a href="#faq" class="hover:text-white transition-colors">よくある質問</a>
+      </div>
+
+      <div class="flex items-center gap-4 text-[#FAF8F5]">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-[#3D3530] hover:bg-[#b8935a] transition-colors" aria-label="Instagram">
+          <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-[#3D3530] hover:bg-[#06C755] transition-colors" aria-label="LINE">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto pt-6 text-center text-[11px] text-[#7A7169]">
+      <p>&copy; 2026 Private Esthetic Salon LUMINA. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- モバイル用 固定予約バー (スマホ集客最適化) -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-[#E8E2D9] p-3 shadow-lg flex gap-2">
+    <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="flex-1 bg-[#06C755] text-white py-3 rounded-xl font-sans-jp text-xs font-bold flex items-center justify-center gap-1.5 shadow">
+      <i data-lucide="message-circle" class="w-4 h-4"></i>
+      <span>LINEで無料相談</span>
+    </a>
+    <a href="#reservation" class="open-reservation-btn flex-1 bg-[#b8935a] text-white py-3 rounded-xl font-sans-jp text-xs font-bold flex items-center justify-center gap-1.5 shadow">
+      <i data-lucide="calendar" class="w-4 h-4"></i>
+      <span>WEBで即時予約</span>
+    </a>
+  </div>
+
+  <!-- 簡易予約モーダル（デモ・ローカル確認用） -->
+  <div id="reservation-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button id="close-modal-btn" class="absolute top-5 right-5 text-[#8C827A] hover:text-[#2C2724] p-1">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <span class="font-serif-en text-xs tracking-widest text-[#b8935a] uppercase">Reservation</span>
+        <h3 class="font-serif-jp text-xl text-[#2C2724] font-medium mt-1">ご予約・お問い合わせ</h3>
+        <p class="font-sans-jp text-xs text-[#7A7169] mt-2">
+          下記フォームまたは公式LINEよりお申し込みいただけます。
+        </p>
+      </div>
+
+      <form onsubmit="event.preventDefault(); alert('ご予約リクエストを受け付けました。折り返しサロンよりご連絡いたします。（※ローカル確認用デモ）');" class="space-y-4 font-sans-jp text-xs">
+        <div>
+          <label class="block text-[#38332E] font-medium mb-1">お名前 <span class="text-rose-500">*</span></label>
+          <input type="text" required placeholder="例：山田 花子" class="w-full px-4 py-2.5 rounded-xl border border-[#D5CBC0] focus:outline-none focus:border-[#b8935a]" />
+        </div>
+
+        <div>
+          <label class="block text-[#38332E] font-medium mb-1">メールアドレス <span class="text-rose-500">*</span></label>
+          <input type="email" required placeholder="example@email.com" class="w-full px-4 py-2.5 rounded-xl border border-[#D5CBC0] focus:outline-none focus:border-[#b8935a]" />
+        </div>
+
+        <div>
+          <label class="block text-[#38332E] font-medium mb-1">お電話番号 <span class="text-rose-500">*</span></label>
+          <input type="tel" required placeholder="090-1234-5678" class="w-full px-4 py-2.5 rounded-xl border border-[#D5CBC0] focus:outline-none focus:border-[#b8935a]" />
+        </div>
+
+        <div>
+          <label class="block text-[#38332E] font-medium mb-1">ご希望のメニュー</label>
+          <select class="w-full px-4 py-2.5 rounded-xl border border-[#D5CBC0] focus:outline-none focus:border-[#b8935a] bg-white">
+            <option>Celangel Line（フェイスデザインケア 3,000円）</option>
+            <option>Celangel face slim Line（集中フェイスライン 6,000円）</option>
+            <option>【プレミアム6回】Celangel Face コース（15,000円 / セラミド6,600円相当特典付）</option>
+            <option>【プレミアム6回】Celangel face slim Line コース（36,000円 / EGF 13,200円相当特典付）</option>
+            <option>【プレミアム各6回】Celangel Premium (Face + slim Line)（50,000円 / 38,500円相当特典付）</option>
+            <option>【ボディ打ち放題】Celangel Body Premium Bottle（55,000円）</option>
+            <option>当日カウンセリングで相談して決めたい</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-[#38332E] font-medium mb-1">ご希望日時（第1希望） <span class="text-rose-500">*</span></label>
+          <input type="datetime-local" required class="w-full px-4 py-2.5 rounded-xl border border-[#D5CBC0] focus:outline-none focus:border-[#b8935a]" />
+        </div>
+
+        <div>
+          <label class="block text-[#38332E] font-medium mb-1">ご要望・お悩み（任意）</label>
+          <textarea rows="3" placeholder="特に気になるお悩みやご質問があればご記入ください" class="w-full px-4 py-2.5 rounded-xl border border-[#D5CBC0] focus:outline-none focus:border-[#b8935a]"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 bg-[#b8935a] hover:bg-[#a07e49] text-white rounded-xl font-bold tracking-wider shadow transition-colors text-sm">
+          予約リクエストを送信する
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "palt";
+  }
+
+  body {
+    background-color: #FAF8F5;
+    color: #38332E;
+    font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+  }
+
+  .font-sans-jp {
+    font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+  }
+
+  .font-serif-en {
+    font-family: 'Cormorant Garamond', 'Cinzel', serif;
+  }
+
+  .font-serif-jp {
+    font-family: 'Shippori Mincho', serif;
+  }
+
+  .font-script {
+    font-family: 'Pinyon Script', cursive;
+  }
+
+  .font-alex {
+    font-family: 'Alex Brush', cursive;
+  }
+
+  .font-italic-serif {
+    font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+
+  .font-allura {
+    font-family: 'Allura', cursive;
+  }
+
+  .font-greatvibes {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .font-parisienne {
+    font-family: 'Parisienne', cursive;
+  }
+}
+
+/* カスタムアニメーションと装飾 */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #c5a880 0%, #e8d7c1 50%, #b8935a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #b8935a 0%, #c9aa82 50%, #9e7a45 100%);
+}
+
+.bg-gold-soft {
+  background: linear-gradient(135deg, #fdfbf7 0%, #f4ede4 100%);
+}
+
+.gold-border {
+  border-color: rgba(197, 168, 128, 0.35);
+}
+
+.gold-glow {
+  box-shadow: 0 10px 30px -5px rgba(184, 147, 90, 0.18);
+}
