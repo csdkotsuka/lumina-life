@@ -81,12 +81,12 @@ menuTabs.forEach(tab => {
     const target = tab.dataset.target;
 
     menuTabs.forEach(t => {
-      t.classList.remove('bg-[#C03673]', 'text-white', 'shadow-md');
-      t.classList.add('bg-white', 'text-[#3D3136]');
+      t.classList.remove('bg-[#C71F66]', 'text-white', 'shadow-md');
+      t.classList.add('bg-white', 'text-[#4A152B]');
     });
 
-    tab.classList.remove('bg-white', 'text-[#3D3136]');
-    tab.classList.add('bg-[#C03673]', 'text-white', 'shadow-md');
+    tab.classList.remove('bg-white', 'text-[#4A152B]');
+    tab.classList.add('bg-[#C71F66]', 'text-white', 'shadow-md');
 
     menuGroups.forEach(group => {
       if (target === 'all' || group.dataset.category === target) {
