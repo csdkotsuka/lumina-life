@@ -1,5 +1,5 @@
 import './style.css';
-import { createIcons, Sparkles, Heart, ShieldCheck, Clock, MapPin, Phone, Calendar, ArrowRight, CheckCircle2, ChevronDown, Menu, X, Star, Award, MessageCircle, Check } from 'lucide';
+import { createIcons, Sparkles, Heart, ShieldCheck, Clock, MapPin, Phone, Calendar, ArrowRight, CheckCircle2, ChevronDown, Menu, X, Star, Award, MessageCircle, Check, Sun, Activity, Smile } from 'lucide';
 
 // Lucide アイコン初期化
 function initIcons() {
@@ -20,7 +20,10 @@ function initIcons() {
       Star,
       Award,
       MessageCircle,
-      Check
+      Check,
+      Sun,
+      Activity,
+      Smile
     }
   });
 }
